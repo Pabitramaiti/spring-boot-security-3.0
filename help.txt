@@ -10,7 +10,11 @@ Spring Boot Security:-
 
 	select * from userinfo;
 
-	http://localhost:8080/products/new
+Service Endpoint:-
+	http://localhost:8080/products/welcome
+	http://localhost:8080/users/createuser
+	http://localhost:8080/products/all
+	http://localhost:8080/products/10
 
 	Create User Request Body:-
 	--------------------------
