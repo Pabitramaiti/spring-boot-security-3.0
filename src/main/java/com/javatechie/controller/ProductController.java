@@ -1,13 +1,16 @@
 package com.javatechie.controller;
 
-import com.javatechie.dto.Product;
-import com.javatechie.entity.UserInfo;
-import com.javatechie.service.ProductService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.javatechie.dto.Product;
+import com.javatechie.service.ProductService;
 
 @RestController
 @RequestMapping("/products")
@@ -21,10 +24,10 @@ public class ProductController {
         return "Welcome this endpoint is not secure";
     }
 
-    @PostMapping("/new")
+    /*@PostMapping("/new")
     public String addNewUser(@RequestBody UserInfo userInfo){
         return service.addUser(userInfo);
-    }
+    }*/
 
     @GetMapping("/all")
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
